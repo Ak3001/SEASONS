@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#video-container {
+    position: relative;
+    margin-bottom: 120px; /* Add margin to create space between video and grid */
+}
+
+#bgVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 148px;
+}
+#main {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for better readability */
+    padding-bottom: 1px;
+    padding-top: 49px;
+    padding-right: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for the border */
+}
+#main p {
+    color: white; /* Set text color */
+    text-align: center; /* Center align text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 60px;
+    padding-right: 30px;
+    font-size: 30px;
+    line-height: 1cm;
+}
+/*---------------------------------------------------------------------------------*/
+p{
+    font-family: sans-serif;
+   
+  }
+  
+  .c-heroImageGrid {
+      position: relative;
+      overflow: hidden;
+      height: 50vw;
+      background: #fff;
+      margin-bottom: 60px;
+  }
+  
+  .c-heroImageGrid .container {
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      top: -20vw;
+      left: -8vw;
+      transform: rotateZ(45deg);
+      height: 100vw;
+      width: 107vw;
+  }
+  
+  .c-heroImageGrid .container .column {
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(1) {
+      border-right: 8px solid white;
+      width: 25%;
+      height: 66vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(1):hover {
+      opacity: 0.75;
+      cursor: pointer;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(1):before {
+      position: absolute;
+      top: 8.4vw;
+      left: 8.1vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotateZ(-45deg);
+      content: "";
+      width: 37vw;
+      height: 38vw;
+      background-image: url(https://wallpapers.com/images/featured/autumn-season-pictures-e69mrnh9zjnp3xp3.jpg);
+  }
+  
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 75%;
+      height: 109.1vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row {
+      border-top: 8px solid #fff;
+  }
+  
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1) {
+      position: relative;
+      overflow: hidden;
+      height: 50vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1):hover {
+      opacity: 0.75;
+      cursor: pointer;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1):before {
+      position: absolute;
+      top: -10.1vw;
+      left: -14.3vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotateZ(-45deg);
+      content: "";
+      width: 65vw;
+      height: 39vw;
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/37/Autumn_Lane.jpg);
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) {
+      display: flex;
+      height: 40.5vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+      border-top: none;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) {
+      overflow: hidden;
+      width: 30%;
+      background-color: #8B8B8A;
+      padding-right: 299px;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      transform: rotateZ(-45deg);
+      position: relative;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text h6 {
+      position: absolute;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.35vw;
+      width: 20vw;
+      top: 16vw;
+      left: 7vw;
+      line-height: 1.55vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text p {
+      text-align: right;
+      position: absolute;
+      color: #fff;
+      font-size: 0.9vw;
+      width: 18vw;
+      top: 23.5vw;
+      left: -3.5vw;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2) {
+      position: relative;
+      width: 70%;
+      border-left: 8px solid white;
+      overflow: hidden;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2):hover {
+      opacity: 0.75;
+      cursor: pointer;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2):before {
+      position: absolute;
+      top: 0;
+      left: -40vw;
+      width: 110.1vw;
+      height: 110vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotateZ(-45deg);
+      content: "";
+      background-image: url(https://www.teahub.io/photos/full/281-2814315_fall-season.jpg);
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+      position: relative;
+      height: 18.6vw;
+      overflow: hidden;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3):hover {
+      opacity: 0.75;
+      cursor: pointer;
+  }
+  
+  .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3):before {
+      position: absolute;
+      top: 7.5vw;
+      left: 25vw;
+      width: 33vw;
+      height: 27vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotateZ(-45deg);
+      content: "";
+      background-image: url(https://w0.peakpx.com/wallpaper/346/768/HD-wallpaper-autumn-fall-season-trees-autumn-trees-nature.jpg);
+  }
+  
+  /*----------------------------------------------------------------*/
+  *{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+   
+   body{
+    font-size: 16px;
+    font-family: monospace, "Helvetica Neue", Helvetica, Verdana, sans-serif;
+    background-color: #543c1e;
+    text-align: center;
+    color: #666;
+   }
+   
+   #pagewrap{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+   }
+   
+   .gallery{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10vh 5vh;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   
+   .image{
+    width: 28%;
+    border: 1.5px solid #ccc;
+    padding: 10px;
+    margin: 2% 1.5%;
+    flex-grow: 1;
+    background-color: #ecf0f1;
+   }
+   
+   .image img{
+    max-width: 100%;
+    margin: 0 auto;
+   }
+   
+   .image:hover{
+    box-shadow: 0 1px 30px rgba(0,0,0,.3);
+    transform: scale(1.10);
+    border: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    z-index: 1;
+   }
+   
+   .image p{
+    padding: 10px;
+   }
+   
+  #te h1{
+    font-size:40px;
+    color:#ecf0f1
+  }

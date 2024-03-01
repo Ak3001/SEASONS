@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#video-container {
+    position: relative;
+    margin-bottom: 120px; /* Add margin to create space between video and grid */
+}
+
+#bgVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 148px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure the grid is on top of the video */
+    margin-top: 20px; /* Add margin to create space between video and grid */
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+.grid-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#main {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for better readability */
+    padding-top: 120px;
+    padding-right: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for the border */
+}
+
+#main p {
+    color: white; /* Set text color */
+    text-align: center; /* Center align text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 60px;
+    padding-right: 30px;
+    font-size: 30px;
+    line-height: 1cm;
+}
+
+#h1a {
+    padding-left: 500px;
+    padding-bottom: 140px;
+}
+
+/* Your additional CSS code starts here */
+
+img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: clamp(1rem, 0.8750rem + 0.6250vw, 1.5rem);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 25% 30% 15% 25%;
+    gap: 15px;
+    place-content: center;
+    grid-template-rows: 50% 50%;
+    height: 80vh;
+    min-height: 460px;
+    padding: max(2vh, 1.5rem);
+    margin-top: 143px;
+    margin-bottom: 140px;
+
+    @media screen and (max-width: 690px) {
+        height: 65vh;
+    }
+
+    @media screen and (max-width: 470px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 35%);
+    }
+
+    .card {
+        border-radius: 25px;
+        box-shadow: -2px 4px 15px rgb(0 0 0 / 26%);
+
+        @media screen and (max-width: 470px) {
+            grid-column: span 1;
+        }
+
+        &:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: span 2;
+
+            @media screen and (max-width: 690px) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+
+        &:nth-child(3) {
+            grid-column: span 2;
+
+            @media screen and (max-width: 690px) {
+                grid-column: 2/4;
+                grid-row: 1/2;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            &:nth-child(6) {
+                grid-column: 2/4;
+                grid-row: 2/3;
+            }
+        }
+
+        @media screen and (max-width: 470px) {
+            &:nth-child(5) {
+                grid-column: span 2;
+            }
+        }
+
+        p {
+            font-size: clamp(0.9rem, 0.8750rem + 0.1250vw, 1rem);
+            line-height: 1.4;
+        }
+
+        img {
+            border-radius: 25px;
+        }
+
+        .card__img {
+            position: relative;
+            height: 100%;
+
+            .card__overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                color: #fff;
+                padding: clamp(0.938rem, 5vw, 1.563rem);
+                background: rgb(2, 2, 46);
+                background: linear-gradient(
+                    0deg,
+                    rgb(0 0 0 / 57%) 0%,
+                    rgb(255 255 255 / 0%) 100%
+                );
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+
+            span {
+                position: absolute;
+                top: 25px;
+                left: min(2vmax, 1.563rem);
+                color: #ff7b29;
+                background: #fff;
+                border-radius: 50px;
+                padding: 2px 8px 2px 6px;
+                display: flex;
+                box-shadow: 0px 1px 20px #0000002b;
+
+                @media screen and (max-width: 690px) {
+                    top: 20px;
+                }
+
+                @media screen and (max-width: 470px) {
+                    top: 15px;
+                }
+
+                svg {
+                    fill: #ff7b29;
+                    width: 20px;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}
+#des h1{
+    padding-top: 146px;
+    padding-left: 483px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sacramento');
+
+html {
+  font-size: 14.5px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.45em;
+  background-color: #f0f0f0;
+  color: #404646;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.travel-container {
+  margin: 1.6rem 0.8rem;
+  padding-top:130px;
+}
+
+.travel-grid {
+  margin: auto;
+  display: grid;
+  grid-gap: 1.1312rem;
+  grid-template-columns: repeat(auto-fit, 12.8rem);
+  grid-auto-rows: 12.8rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+  max-width: 75em;
+}
+
+.travel-card {
+  grid-row: auto / span 1;
+  grid-column: auto / span 1;
+  background-color: white;
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+}
+
+.travel-card h1,
+.travel-card h2,
+.travel-card h3,
+.travel-card h4,
+.travel-card p {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.card-image {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.card-image img {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+
+  object-fit: cover;
+  width: 504px;
+}
+
+.card-side-by-side {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.card-side-by-side--m {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card-side-by-side--m img {
+  min-height: auto;
+}
+
+.card-content {
+  padding: 1.6rem;
+  font-size:10px;
+}
+
+
+.travel-card--featured {
+  grid-row: auto / span 3;
+  grid-column: auto / span 2;
+}
+
+.travel-card--2x {
+  grid-row: auto / span 2;
+  grid-column: auto / span 2;
+}
+
+.travel-card--vertical {
+  grid-row: auto / span 2;
+  margin-left:200px;
+}
+
+.travel-card--horizontal {
+  grid-column: auto / span 2;
+}
+
+.travel-card--frameless {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.padding-large {
+  padding: 3.2rem;
+}
+
+.padding-large--l {
+  padding: 1.6rem;
+
+}
+
+.big-script {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sacramento', sans-serif;
+  font-size: 4.3em;
+  line-height: 0.7em;
+  text-align: center;
+}
+
+.big-script p {
+  margin: 0;
+  font-size: 20px;
+
+}
+
+@media (max-width: 413px) {
+  .travel-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .travel-card {
+    min-height: 12.8rem;
+  }
+}
+
+@media (min-width: 627px) {
+  .travel-grid {
+    grid-gap: 1.6rem;
+  }
+
+  .card-side-by-side--m {
+    flex-flow: row nowrap;
+  }
+
+  .card-side-by-side--m img {
+    min-height: 100%;
+  }
+
+  .travel-card--featured {
+    grid-row: auto / span 2;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 836px) {
+  .padding-large--l {
+    padding: 3.2rem;
+  }
+}
+#tt h1{
+    padding-left:450px;
+   
+}
+
